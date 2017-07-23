@@ -1,0 +1,482 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="fragments/header :: head">
+    <title id="pageTitle">Customer Maintenance - Add/Edit</title>
+    <!-- other elements you want to reference in your layout -->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header"  th:include="fragments/header :: header" >
+  </header>
+  
+  <aside class="main-sidebar"  th:include="fragments/header :: sidebar" >
+  </aside>
+  
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+		<h1>
+			Customer Maintenance - Add
+			<button class="btn btn-info pull-right" type="submit">Save</button>
+			<button class="btn btn-info pull-right" type="submit" style="margin-right:5px;">Clear All</button>
+		</h1>
+    </section>
+    
+    <section class="content">
+		<div class="box box-primary" style="padding:20px;">
+            <div class="box-header">
+              <h3 class="box-title">Customer Profile</h3>
+            </div>
+            <div class="box-body">
+				<div class="row">
+				<form class="form-horizontal">
+              <div class="box-body">
+                <div class="form-group">
+				<div class="col-sm-2">
+                  <img id="blah" src="https://support.plymouth.edu/kb_images/Yammer/default.jpeg" alt="" style="width:150px; height:150px;">
+						<input type="file" onchange="#" class="hidden"><br>
+						<input type="submit" value="Upload Image" name="Upload" style="padding:2px 32px 2px 32px;">
+				  </div>
+                  <div class="col-sm-10">
+                    <div class="col-md-6">
+								<div class="row">
+									<div class="col-md-3"><p>Customer ID</p></div>
+									<div class="col-md-9">
+										<input class="form-control-1" type="text" disabled="">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3"><p>first name</p></div>
+									<div class="col-md-9">
+										<input class="form-control-1" type="text">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3"><p>last name</p></div>
+									<div class="col-md-9">
+										<input class="form-control-1" type="text">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3"><p>HN</p></div>
+									<div class="col-md-9">
+										<input class="form-control-1" type="text">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3"><p>Passport No.</p></div>
+									<div class="col-md-9">
+										<input class="form-control-1" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-md-3"><p>Birth Date</p></div>
+									<div class="col-md-9">
+										<input class="form-control-1 pull-right" id="datepicker" type="text">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3"><p>Type</p></div>
+									<div class="col-md-9">
+										<select class="form-control-1">
+										  <option selected="selected">Type1</option>
+										  <option>Type2</option>
+										  <option>Type3</option>
+										  <option>Type4</option>
+										  <option>Type5</option>
+										  <option>Type6</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3"><p>Accomendation</p></div>
+									<div class="col-md-9">
+										<select class="form-control-1">
+										  <option selected="selected">Accomendation1</option>
+										  <option>Accomendation2</option>
+										  <option>Accomendation3</option>
+										  <option>Accomendation4</option>
+										  <option>Accomendation5</option>
+										  <option>Accomendation6</option>
+										</select>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3"><p>Pick/Deliver service</p></div>
+									<div class="col-md-9">
+										<select class="form-control-1">
+										  <option selected="selected">Pick/Deliver service1</option>
+										  <option>Pick/Deliver service2</option>
+										  <option>Pick/Deliver service3</option>
+										  <option>Pick/Deliver service4</option>
+										  <option>Pick/Deliver service5</option>
+										  <option>Pick/Deliver service6</option>
+										</select>
+									</div>
+								</div>
+							</div>
+                  </div>
+                </div>
+                
+                
+              </div>
+            </form>
+					
+					
+				</div>
+          <!-- /.row -->
+			</div>
+			<div class="box box-danger">
+				<div class="box-header">
+				  <h3 class="box-title"><label>History Records</label></h3>
+				</div>
+				<hr>
+				<div class="box-body">
+					<label>Part 1.</label>
+					<div class="col-md-12">
+						<div class="col-md-1">
+							<div>&nbsp;</div>
+							<div>1.</div>
+						</div>
+						<div class="col-md-2">
+							<div>Date</div>
+							<div><input class="form-control-1 pull-right datepicker-click" id="datepicker1" type="text"></div>
+						</div>
+						<div class="col-md-2">
+							<div>RT</div>
+							<div><input type="text" class="form-control-1"></div>
+							<div>LH</div>
+							<div><input type="text" class="form-control-1"></div>
+						</div>
+						<div class="col-md-2">
+							<div>LT</div>
+							<div><input type="text" class="form-control-1"></div>
+							<div>E2</div>
+							<div><input type="text" class="form-control-1"></div>
+						</div>
+						<div class="col-md-2">
+							<div>FSH</div>
+							<div><input type="text" class="form-control-1"></div>
+							<div>Remark</div>
+							<div><input type="text" class="form-control-1"></div>
+						</div>
+						<div class="col-md-2">
+							<div>Period</div>
+							<div><input type="text" class="form-control-1"></div>
+							<div>Amount</div>
+							<div><input type="text" class="form-control-1"></div>
+							<span>AMH</span>
+							<input type="text" class="form-control-1">
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+					<div class="col-md-12">
+						<div class="col-md-1">
+							<div>&nbsp;</div>
+							<div>2.</div>
+						</div>
+						<div class="col-md-2">
+							<div>Date</div>
+							<div><input class="form-control-1 pull-right datepicker-click" id="" type="text"></div>
+						</div>
+						<div class="col-md-2">
+							<div>RT</div>
+							<div><input type="text" class="form-control-1"></div>
+						</div>
+						<div class="col-md-2">
+							<div>LT</div>
+							<div><input type="text" class="form-control-1"></div>
+							<div>Remark</div>
+							<div><input type="text" class="form-control-1"></div>
+						</div>
+						<div class="col-md-2">
+							<div>HL</div>
+							<div><input type="text" class="form-control-1"></div>
+							<div>Period</div>
+							<div><input type="text" class="form-control-1"></div>
+						</div>
+						<div class="col-md-2">
+							<div>E2</div>
+							<div><input type="text" class="form-control-1"></div>
+							<div>Amount</div>
+							<div><input type="text" class="form-control-1"></div>
+						</div>
+						<div class="col-md-1">
+							<div>&nbsp;</div>
+							<div>
+								<div class="pull-right box-tools">
+									<button title="Collapse" class="btn btn-info btn-sm" type="button">
+										<i class="fa fa-minus"></i></button>
+									<button title="Plus" class="btn btn-info btn-sm" type="button">
+										<i class="fa fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="box-body">
+					<label>Part 2. OPU</label>
+					<div class="col-md-12">
+						<div class="col-md-1">
+							<div>&nbsp;</div>
+							<div>1.</div>
+						</div>
+						<div class="col-md-2">
+							<div>Date</div>
+							<div><input class="form-control-1 pull-right datepicker-click" id="datepicker1" type="text"></div>
+						</div>
+						<div class="col-md-2">
+							<div>OPU</div>
+							<div><input type="text" class="form-control-1"></div>
+						</div>
+						<div class="col-md-2">
+							<div>ICSI</div>
+							<div><input type="text" class="form-control-1"></div>
+						</div>
+						<div class="col-md-2">
+							<div>FSH</div>
+							<div><input type="text" class="form-control-1"></div>
+						</div>
+						<div class="col-md-2">
+							<div></div>
+							<div></div>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+					<div class="col-md-12">
+						<div class="col-md-1">
+							<div>&nbsp;</div>
+							<div>2.</div>
+							
+						</div>
+						<div class="col-md-2">
+							<div>Date</div>
+							<div><input class="form-control-1 pull-right datepicker-click" id="" type="text"></div>
+						</div>
+						<div class="col-md-8">
+							<div>&nbsp;</div>
+							<div><input type="text" class="form-control-1"></div>
+						</div>
+						<div class="col-md-1">
+							<div>&nbsp;</div>
+							<div>
+								<div class="pull-right box-tools">
+									<button title="Collapse" class="btn btn-info btn-sm" type="button">
+										<i class="fa fa-minus"></i></button>
+									<button title="Plus" class="btn btn-info btn-sm" type="button">
+										<i class="fa fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="box-body">
+					<label>Part 3. Enbryo Culture</label>
+					<div class="col-md-12">
+						<div class="col-md-1">
+							<div>&nbsp;</div>
+							<div>1.</div>
+						</div>
+						<div class="col-md-2">
+							<div>Day1</div>
+							<div>
+								<select class="form-control-1">
+									<option selected="selected">Day1_1</option>
+									<option>Day1_2</option>
+									<option>Day1_3</option>
+									<option>Day1_4</option>
+									<option>Day1_5</option>
+									<option>Day1_6</option>
+								</select>
+							</div>
+							<div>Grade</div>
+							<div>
+								<select class="form-control-1">
+									<option selected="selected">Grade_1</option>
+									<option>Grade_2</option>
+									<option>Grade_3</option>
+									<option>Grade_4</option>
+									<option>Grade_5</option>
+									<option>Grade_6</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div>Day3</div>
+							<div>
+								<select class="form-control-1">
+									<option selected="selected">Day3_1</option>
+									<option>Day3_2</option>
+									<option>Day3_3</option>
+									<option>Day3_4</option>
+									<option>Day3_5</option>
+									<option>Day3_6</option>
+								</select>
+							</div>
+							<div>Des</div>
+							<div>
+								<select class="form-control-1">
+									<option selected="selected">Des_1</option>
+									<option>Des_2</option>
+									<option>Des_3</option>
+									<option>Des_4</option>
+									<option>Des_5</option>
+									<option>Des_6</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div>Day5</div>
+							<div>
+								<select class="form-control-1">
+									<option selected="selected">Day5_1</option>
+									<option>Day5_2</option>
+									<option>Day5_3</option>
+									<option>Day5_4</option>
+									<option>Day5_5</option>
+									<option>Day5_6</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div>Day6</div>
+							<div>
+								<select class="form-control-1">
+									<option selected="selected">Day6_1</option>
+									<option>Day6_2</option>
+									<option>Day6_3</option>
+									<option>Day6_4</option>
+									<option>Day6_5</option>
+									<option>Day6_6</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div>Status</div>
+							<div>
+								<select class="form-control-1">
+									<option selected="selected">Status_1</option>
+									<option>Status_2</option>
+									<option>Status_3</option>
+									<option>Status_4</option>
+									<option>Status_5</option>
+									<option>Status_6</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div>&nbsp;</div>
+							<div>
+								<div class="pull-right box-tools">
+									<button title="Collapse" class="btn btn-info btn-sm" type="button">
+										<i class="fa fa-minus"></i></button>
+									<button title="Plus" class="btn btn-info btn-sm" type="button">
+										<i class="fa fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="box-body">
+					<label>Part 4.</label>
+					<div class="col-md-12">
+						<div class="col-md-1">
+							<div>&nbsp;</div>
+							<div>1.</div>
+						</div>
+						<div class="col-md-2">
+							<div>Date</div>
+							<div><input class="form-control-1 pull-right datepicker-click" id="datepicker1" type="text"></div>
+						</div>
+						<div class="col-md-2">
+							<div>Emorgo No.</div>
+							<div><input type="text" class="form-control-1"></div>
+						</div>
+						<div class="col-md-2">
+							<div>HCG</div>
+							<div><input type="text" class="form-control-1"></div>
+						</div>
+						<div class="col-md-2">
+							<div>LH</div>
+							<div><input type="text" class="form-control-1"></div>
+						</div>
+						<div class="col-md-2">
+							<div>Status</div>
+							<div>
+								<select class="form-control-1">
+									<option selected="selected">Status_1</option>
+									<option>Status_2</option>
+									<option>Status_3</option>
+									<option>Status_4</option>
+									<option>Status_5</option>
+									<option>Status_6</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-1">
+							<div>&nbsp;</div>
+							<div>
+								<div class="pull-right box-tools">
+									<button title="Collapse" class="btn btn-info btn-sm" type="button">
+										<i class="fa fa-minus"></i></button>
+									<button title="Plus" class="btn btn-info btn-sm" type="button">
+										<i class="fa fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="box-body">
+					<label>Part 5. Extra Fee</label>
+					<div class="col-md-12">
+							<div class="col-md-1">
+								<div>&nbsp;</div>
+								<div>1.</div>
+							</div>
+							<div class="col-md-2">
+								<div>Date</div>
+								<div><input class="form-control-1 pull-right datepicker-click" id="datepicker1" type="text"></div>
+							</div>
+							<div class="col-md-6">
+								<div>Description</div>
+								<div><input class="form-control-1 pull-right datepicker-click" id="datepicker1" type="text"></div>
+							</div>
+							<div class="col-md-2">
+								<div>Amount</div>
+								<div><input class="form-control-1 pull-right datepicker-click" id="datepicker1" type="text"></div>
+							</div>
+							<div class="col-md-1">
+								<div>&nbsp;</div>
+								<div>
+									<div class="pull-right box-tools">
+										<button title="Collapse" class="btn btn-info btn-sm" type="button">
+										  <i class="fa fa-minus"></i></button>
+										<button title="Plus" class="btn btn-info btn-sm" type="button">
+										  <i class="fa fa-plus"></i></button>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+      
+      
+  
+</div>
+  
+ <aside  th:include="fragments/footer :: footer" >
+  </aside>
+  </div>
+</body>
+</html>

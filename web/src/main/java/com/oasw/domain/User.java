@@ -1,4 +1,4 @@
-package com.customermaintenance.domain;
+package com.oasw.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,22 +14,23 @@ import lombok.ToString;
 
 @Data
 @ToString(exclude = "password")
-@Entity(name="user")
-public class User{
+@Entity
+public class User {
 
 	public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder();
-	private @Id @Column(name = "user_id" ) int userId;
-	private @Column(name = "username" )String userName;
-	private @Column(name = "user_password" )@JsonIgnore String password;
-	private @Column(name = "user_first_name" ) String firstName;
-	private @Column(name = "user_last_name" ) String lastName;
-	private @Column(name = "user_role" ) String role;
+	private @Id @Column(name = "user_id") int userId;
+	private @Column(name = "username") String userName;
+	private @Column(name = "user_password") @JsonIgnore String password;
+	private @Column(name = "user_first_name") String firstName;
+	private @Column(name = "user_last_name") String lastName;
+	private @Column(name = "user_role") String role;
 
 	public void setPassword(String password) {
 		this.password = PASSWORD_ENCODER.encode(password);
 	}
 
-	protected User() {}
+	protected User() {
+	}
 
 	public User(int userId, String userName, String password, String firstName, String lastName, String role) {
 		this.userId = userId;
@@ -39,6 +40,5 @@ public class User{
 		this.lastName = lastName;
 		this.role = role;
 	}
-
 
 }

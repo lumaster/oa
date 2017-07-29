@@ -1,4 +1,4 @@
-package com.customermaintenance;
+package com.oasw;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

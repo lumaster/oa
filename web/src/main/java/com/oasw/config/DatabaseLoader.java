@@ -1,14 +1,14 @@
-package com.customermaintenance.config;
+package com.oasw.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
-import com.customermaintenance.domain.Customer;
-import com.customermaintenance.domain.User;
-import com.customermaintenance.repository.CustomerRepository;
-import com.customermaintenance.repository.UserRepository;
+import com.oasw.domain.Customer;
+import com.oasw.domain.User;
+import com.oasw.repository.CustomerRepository;
+import com.oasw.repository.UserRepository;
 
 @Component
 public class DatabaseLoader implements CommandLineRunner {

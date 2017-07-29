@@ -1,4 +1,4 @@
-package com.customermaintenance.domain;
+package com.oasw.domain;
 
 import java.io.Serializable;
 import java.util.Date;

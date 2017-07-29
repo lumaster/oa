@@ -1,4 +1,4 @@
-package com.customermaintenance.config;
+package com.oasw.config;
 
 import java.io.IOException;
 

@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head th:include="fragments/header :: head">
-    <title id="pageTitle">Customer Maintenance - DashBoard</title>
+    <title id="pageTitle">User Maintenance - Add/Edit</title>
     <!-- other elements you want to reference in your layout -->
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -11,7 +11,8 @@
   <header class="main-header"  th:include="fragments/header :: header" >
   </header>
   
-  <aside class="main-sidebar"  th:include="fragments/header :: sidebar" >
+  <aside class="main-sidebar"  th:include="fragments/header :: sidebar(module='User Maintenance Add/Edit')" >
+  	
   </aside>
   
   <!-- Content Wrapper. Contains page content -->

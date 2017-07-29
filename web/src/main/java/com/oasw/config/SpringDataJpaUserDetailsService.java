@@ -1,6 +1,5 @@
-package com.customermaintenance.config;
+package com.oasw.config;
 
-import com.customermaintenance.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -8,7 +7,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-import com.customermaintenance.repository.UserRepository;
+import com.oasw.domain.User;
+import com.oasw.repository.UserRepository;
 
 @Component
 public class SpringDataJpaUserDetailsService implements UserDetailsService {

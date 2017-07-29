@@ -1,8 +1,8 @@
-package com.customermaintenance.repository;
+package com.oasw.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.customermaintenance.domain.User;
+import com.oasw.domain.User;
 
 public interface UserRepository extends CrudRepository<User, Long> {
 

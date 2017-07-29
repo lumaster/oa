@@ -58,29 +58,9 @@
 
                 <p>
                   Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
                 </p>
               </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
-                </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
                 <div class="pull-right">
                   <a href="#" class="btn btn-default btn-flat">Sign out</a>
                 </div>
@@ -103,12 +83,12 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="active treeview">
+        <li class="treeview" th:classappend="${module == 'dashboard' ? 'active' : ''}">
           <a href="admin.html">
             <i class="fa fa-dashboard"></i> <span>DashBoard</span>
           </a>
         </li>
-        <li class="treeview">
+        <li class="treeview " th:classappend="${module == 'Customer Maintenance Add/Edit' ? 'active' : ''} + ${module == 'Customer Maintenance Search' ? 'active' : ''}"	>
           <a href="#">
             <i class="fa fa-users"></i>
             <span>Customer Maintenance</span>
@@ -117,11 +97,11 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="customer.html"><i class="fa fa-circle-o"></i> Add</a></li>
-            <li><a href="customer-search.html"><i class="fa fa-circle-o"></i>Search</a></li>
+            <li th:classappend="${module == 'Customer Maintenance Add/Edit' ? 'active' : ''}" ><a href="customer.html"><i class="fa fa-circle-o"></i> Add</a></li>
+            <li th:classappend="${module == 'Customer Maintenance Search' ? 'active' : ''}" ><a href="customer-search.html"><i class="fa fa-circle-o"></i>Search</a></li>
           </ul>
         </li>
-        <li class="treeview">
+        <li class="treeview " th:classappend="${module == 'User Maintenance Add/Edit' ? 'active' : ''} + ${module == 'User Maintenance Search' ? 'active' : ''}"	>
           <a href="#">
             <i class="fa fa-user-secret"></i>
             <span>User Maintenance</span>
@@ -130,8 +110,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="user.html"><i class="fa fa-circle-o"></i> Add</a></li>
-            <li><a href="user-search.html"><i class="fa fa-circle-o"></i>Search</a></li>
+            <li th:classappend="${module == 'User Maintenance Add/Edit' ? 'active' : ''}" ><a href="user.html"><i class="fa fa-circle-o"></i> Add</a></li>
+            <li th:classappend="${module == 'User Maintenance Search' ? 'active' : ''}" ><a href="user-search.html"><i class="fa fa-circle-o"></i>Search</a></li>
           </ul>
         </li>
         

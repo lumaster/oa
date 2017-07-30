@@ -15,10 +15,10 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Customer implements Serializable {
+public class Customer {
 	
 	private @Version @JsonIgnore Long version;
-	private @Id @GeneratedValue String customerId;
+	private @Column(name = "customer_id" ) @Id @GeneratedValue int customerId;
 	private @Column(name = "first_name" )String firstName;
 	private @Column(name = "last_name") String lastName;
 	private @Column(name = "brith_date") Date birthDate;

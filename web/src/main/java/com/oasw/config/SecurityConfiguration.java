@@ -1,15 +1,24 @@
 package com.oasw.config;
 
+import com.oasw.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.web.access.AccessDeniedHandler;
 
 import com.oasw.domain.User;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 @Configuration
 @EnableWebSecurity
@@ -21,6 +30,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private SpringDataJpaUserDetailsService userDetailsService;
+
+    @Autowired
+    private UserRepository userRepository;
+
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -38,7 +51,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/admin")
+                .successHandler(new AuthenticationSuccessHandler() {
+                    @Override
+                    public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
+                        if (!(authentication instanceof AnonymousAuthenticationToken)) {
+                            String userName = authentication.getName();
+                            User user = userRepository.findByUserName(userName);
+                            httpServletRequest.getSession().setAttribute("user", user);
+                            httpServletResponse.sendRedirect("/admin");
+                        }
+                    }
+                })
                 .permitAll()
                 .and()
                 .logout()
@@ -46,6 +69,5 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .exceptionHandling().accessDeniedHandler(accessDeniedHandler);
     }
-
 
 }

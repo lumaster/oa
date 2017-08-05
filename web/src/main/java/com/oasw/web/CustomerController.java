@@ -2,22 +2,21 @@ package com.oasw.web;
 
 import com.oasw.domain.Customer;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class CustomerController {
 
-    @RequestMapping("/customer")
-    public String customerPage() {
+    @GetMapping("/customer")
+    public String customerPage(@ModelAttribute Customer customer) {
         return "customer";
     }
 
     @PostMapping("/customer")
     public String customer(@ModelAttribute Customer customer) {
         return "customer";
+
+
     }
 
     @RequestMapping("/customer-search")

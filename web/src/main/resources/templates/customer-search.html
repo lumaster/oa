@@ -65,15 +65,24 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <table class="table table-bordered table-hover dataTable" id="example2" role="grid" aria-describedby="example2_info">
+                      <colgroup>
+                        <col class="col-sm-1 col-md-1"></colgroup>
+                        <col class="col-sm-4 col-md-4"></colgroup>
+                        <col class="col-sm-1 col-md-1"></colgroup>
+                        <col class="col-sm-1 col-md-1"></colgroup>
+                        <col class="col-sm-1 col-md-1"></colgroup>
+                        <col class="col-sm-2 col-md-2"></colgroup>
+	                    <col class="col-sm-2 col-md-2"></colgroup>
+                      </colgroup>
                       <thead>
                         <tr role="row">
-                          <th style="width:20px;">ID</th>
-                          <th>Name</th>
-                          <th>Type</th>
-                          <th>Amount</th>
-                          <th>Extra Fee</th>
-                          <th>Total</th>
-                          <th style="width:20px;">manage</th>
+                          <th class="text-center">ID</th>
+                          <th class="text-center">Name</th>
+                          <th class="text-center">Type</th>
+                          <th class="text-center">Amount</th>
+                          <th class="text-center">Extra Fee</th>
+                          <th class="text-center">Total</th>
+                          <th class="text-center">manage</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -84,9 +93,9 @@
                           <td></td>
                           <td></td>
                           <td></td>
-                          <td>
-                          <button class="btn btn-info pull-right" type="submit">Edit</button> 
-                          <button class="btn btn-info pull-right" type="submit" style="margin-right:5px;">Delete</button></td>
+                          <td class="text-center">
+                          <button class="btn btn-info" type="submit">Edit</button>
+                          <button class="btn btn-info" type="submit" style="margin-right:5px;">Delete</button></td>
                         </tr>
                         <tr class="even" role="row">
                           <td class="sorting_1">2</td>
@@ -95,9 +104,9 @@
                           <td></td>
                           <td></td>
                           <td></td>
-                          <td>
-                          <button class="btn btn-info pull-right" type="submit">Edit</button> 
-                          <button class="btn btn-info pull-right" type="submit" style="margin-right:5px;">Delete</button></td>
+                          <td class="text-center">
+                          <button class="btn btn-info" type="submit">Edit</button>
+                          <button class="btn btn-info" type="submit" style="margin-right:5px;">Delete</button></td>
                         </tr>
                         <tr class="odd" role="row">
                           <td class="sorting_1">3</td>
@@ -106,9 +115,9 @@
                           <td></td>
                           <td></td>
                           <td></td>
-                          <td>
-                          <button class="btn btn-info pull-right" type="submit">Edit</button> 
-                          <button class="btn btn-info pull-right" type="submit" style="margin-right:5px;">Delete</button></td>
+                          <td  class="text-center">
+                          <button class="btn btn-info" type="submit">Edit</button>
+                          <button class="btn btn-info" type="submit" style="margin-right:5px;">Delete</button></td>
                         </tr>
                         <tr class="even" role="row">
                           <td class="sorting_1">4</td>
@@ -117,9 +126,9 @@
                           <td></td>
                           <td></td>
                           <td></td>
-                          <td>
-                          <button class="btn btn-info pull-right" type="submit">Edit</button> 
-                          <button class="btn btn-info pull-right" type="submit" style="margin-right:5px;">Delete</button></td>
+                          <td  class="text-center">
+                          <button class="btn btn-info" type="submit">Edit</button>
+                          <button class="btn btn-info" type="submit" style="margin-right:5px;">Delete</button></td>
                         </tr>
                         <tr class="odd" role="row">
                           <td class="sorting_1">5</td>
@@ -128,20 +137,20 @@
                           <td></td>
                           <td></td>
                           <td></td>
-                          <td>
-                          <button class="btn btn-info pull-right" type="submit">Edit</button> 
-                          <button class="btn btn-info pull-right" type="submit" style="margin-right:5px;">Delete</button></td>
+                          <td  class="text-center">
+                          <button class="btn btn-info" type="submit">Edit</button>
+                          <button class="btn btn-info" type="submit" style="margin-right:5px;">Delete</button></td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-sm-5">
+                  <div class="col-sm-5 col-md-5">
                     <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 5 of 5
                     entries</div>
                   </div>
-                  <div class="col-sm-7">
+                  <div class="col-sm-7 col-md-7">
                     <div class="dataTables_paginate paging_simple_numbers pull-right" id="example1_paginate" style="margin:-25px 0px -25px 0px;">
 						<ul class="pagination">
 							<li class="paginate_button previous disabled" id="example1_previous">
@@ -182,7 +191,7 @@
       
   
 </div>
-  
+ 
  <aside  th:include="fragments/footer :: footer" >
   </aside>
   </div>

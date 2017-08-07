@@ -3,27 +3,27 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title th:include=":: #pageTitle">Title</title>
 		
-		<link rel="icon" href="/images/favicon.ico">
+		<link rel="icon" th:href="@{/images/favicon.ico}">
 		
-    	<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/bootstrap/dist/css/bootstrap.min.css}"  href="/theme/bootstrap/dist/css/bootstrap.min.css" />
-		<link rel="stylesheet"  type="text/css" media="all" th:href="@{/theme/font-awesome/css/font-awesome.min.css}" href="/theme/font-awesome/css/font-awesome.min.css" />
-		<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/Ionicons/css/ionicons.min.css}" href="/theme/Ionicons/css/ionicons.min.css" />
-		<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/iCheck/all.css}" href="/theme/iCheck/all.css" />
-		<link rel="stylesheet" type="text/css" media="all"  th:href="@{/dist/css/AdminLTE.min.css}" href="/dist/css/AdminLTE.min.css" />
-		<link rel="stylesheet" type="text/css" media="all"  th:href="@{/dist/css/skins/_all-skins.min.css}" href="/dist/css/skins/_all-skins.min.css" />
-		<link rel="stylesheet" type="text/css" media="all"  th:href="@{/css/custom.css}" href="/css/custom.css" />
+    	<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/bootstrap/dist/css/bootstrap.min.css}"/>
+		<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/font-awesome/css/font-awesome.min.css}"/>
+		<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/Ionicons/css/ionicons.min.css}"/>
+		<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/iCheck/all.css}"/>
+		<link rel="stylesheet" type="text/css" media="all"  th:href="@{/dist/css/AdminLTE.min.css}"/>
+		<link rel="stylesheet" type="text/css" media="all"  th:href="@{/dist/css/skins/_all-skins.min.css}"/>
+		<link rel="stylesheet" type="text/css" media="all"  th:href="@{/css/custom.css}" />
 			
 		<!-- Morris chart -->
 	  <!--<link rel="stylesheet"  type="text/css" media="all"  href="../../theme/morris.js/morris.css" />-->
 	  <!-- jvectormap -->
-	  <link rel="stylesheet"  type="text/css" media="all" href="../../theme/jvectormap/jquery-jvectormap-1.2.2.css" />
+	  <link rel="stylesheet"  type="text/css" media="all" th:href="@{/theme/jvectormap/jquery-jvectormap-1.2.2.css}" />
 	  <!-- Date Picker -->
-	  <link rel="stylesheet"  type="text/css" media="all" href="../../theme/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+	  <link rel="stylesheet"  type="text/css" media="all" th:href="@{/theme/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css}" />
 	  <!-- Daterange picker -->
-	  <link rel="stylesheet"  type="text/css" media="all" href="../../theme/bootstrap-daterangepicker/daterangepicker.css" />
+	  <link rel="stylesheet"  type="text/css" media="all" th:href="@{/theme/bootstrap-daterangepicker/daterangepicker.css}" />
 	  <!-- bootstrap wysihtml5 - text editor -->
-	  <link rel="stylesheet"  type="text/css" media="all" href="../../theme/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" />
-	    <link rel="stylesheet"  type="text/css" media="all" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
+	  <link rel="stylesheet"  type="text/css" media="all" th:href="@{/theme/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css}" />
+	  <link rel="stylesheet"  type="text/css" media="all" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
 </head>
 <body>
 	<header th:fragment="header">

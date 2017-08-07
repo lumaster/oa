@@ -1,21 +1,17 @@
 package com.oasw.web;
 
-import com.oasw.domain.User;
 import com.oasw.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.authentication.AnonymousAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class MainController {
-
 
     @Value("${application.name}")
     String appName;
@@ -25,25 +21,13 @@ public class MainController {
         return "login";
     }
 
-    @RequestMapping("/login")
-    public String loginPage(HttpServletRequest request) {
-
-        request.getSession().removeAttribute("user");
+    @GetMapping("/login")
+    public String loginPage(Model model, String error, String logout) {
         return "login";
     }
 
-
-    @RequestMapping("/admin")
-    public String adminPage() {
-
-//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-//
-//        if (!(authentication instanceof AnonymousAuthenticationToken)) {
-//            String userName = authentication.getName();
-//            User user = userRepository.findByUserName(userName);
-//            request.getSession().setAttribute("user", user);
-//        }
-
+    @GetMapping("/admin")
+    public String adminPage(HttpServletRequest request) {
         return "admin";
     }
 

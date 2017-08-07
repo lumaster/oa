@@ -15,8 +15,6 @@ public class CustomerController {
     @PostMapping("/customer")
     public String customer(@ModelAttribute Customer customer) {
         return "customer";
-
-
     }
 
     @RequestMapping("/customer-search")

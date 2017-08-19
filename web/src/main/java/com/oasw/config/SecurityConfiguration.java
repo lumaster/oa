@@ -6,7 +6,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-import com.oasw.domain.User;
+import com.oasw.model.User;
 
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
@@ -29,11 +29,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/","/css/**", "/images/**", "/theme/**", "/dist/**").permitAll()
+                .antMatchers("/css/**", "/images/**", "/theme/**", "/dist/**").permitAll()
                 .anyRequest().fullyAuthenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login")
+                .failureUrl("/login?error=")
                 .defaultSuccessUrl("/admin")
                 .permitAll()
                 .and()

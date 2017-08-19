@@ -1,6 +1,6 @@
 package com.oasw.config;
 
-import com.oasw.domain.User;
+import com.oasw.model.User;
 import com.oasw.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;

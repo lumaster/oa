@@ -1,130 +1,137 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title th:include=":: #pageTitle">Title</title>
-		
-		<link rel="icon" th:href="@{/images/favicon.ico}">
-		
-    	<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/bootstrap/dist/css/bootstrap.min.css}"/>
-		<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/font-awesome/css/font-awesome.min.css}"/>
-		<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/Ionicons/css/ionicons.min.css}"/>
-		<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/iCheck/all.css}"/>
-		<link rel="stylesheet" type="text/css" media="all"  th:href="@{/dist/css/AdminLTE.min.css}"/>
-		<link rel="stylesheet" type="text/css" media="all"  th:href="@{/dist/css/skins/_all-skins.min.css}"/>
-		<link rel="stylesheet" type="text/css" media="all"  th:href="@{/css/custom.css}" />
-			
-		<!-- Morris chart -->
-	  <!--<link rel="stylesheet"  type="text/css" media="all"  href="../../theme/morris.js/morris.css" />-->
-	  <!-- jvectormap -->
-	  <link rel="stylesheet"  type="text/css" media="all" th:href="@{/theme/jvectormap/jquery-jvectormap-1.2.2.css}" />
-	  <!-- Date Picker -->
-	  <link rel="stylesheet"  type="text/css" media="all" th:href="@{/theme/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css}" />
-	  <!-- Daterange picker -->
-	  <link rel="stylesheet"  type="text/css" media="all" th:href="@{/theme/bootstrap-daterangepicker/daterangepicker.css}" />
-	  <!-- bootstrap wysihtml5 - text editor -->
-	  <link rel="stylesheet"  type="text/css" media="all" th:href="@{/theme/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css}" />
-	  <link rel="stylesheet"  type="text/css" media="all" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title th:include=":: #pageTitle">Title</title>
+	
+	<link rel="icon" th:href="@{/images/favicon.ico}">
+	
+	<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/bootstrap/dist/css/bootstrap.min.css}"/>
+	<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/font-awesome/css/font-awesome.min.css}"/>
+	<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/Ionicons/css/ionicons.min.css}"/>
+	<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/iCheck/all.css}"/>
+	<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/select2/dist/css/select2.min.css}"/>
+	<link rel="stylesheet" type="text/css" media="all" th:href="@{/dist/css/AdminLTE.min.css}"/>
+	<link rel="stylesheet" type="text/css" media="all" th:href="@{/dist/css/skins/_all-skins.min.css}"/>
+	<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/custom.css}"/>
+	
+	<!-- Morris chart -->
+	<!--<link rel="stylesheet"  type="text/css" media="all"  href="../../theme/morris.js/morris.css" />-->
+	<!-- jvectormap -->
+	<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/jvectormap/jquery-jvectormap-1.2.2.css}"/>
+	<!-- Date Picker -->
+	<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css}"/>
+	<!-- Daterange picker -->
+	<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/bootstrap-daterangepicker/daterangepicker.css}"/>
+	<!-- bootstrap wysihtml5 - text editor -->
+	<link rel="stylesheet" type="text/css" media="all" th:href="@{/theme/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css}"/>
+	<link rel="stylesheet" type="text/css" media="all" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"/>
+	
 </head>
 <body>
-	<header th:fragment="header">
-    <!-- Logo -->
-    <a href="admin.html" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b th:text="${@environment.getProperty('application.mininame')}"></b></span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg" th:text="${@environment.getProperty('application.shortname')}"></span>
-    </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
-      </a>
+<header th:fragment="header">
+	<!-- Logo -->
+	<a href="admin.html" class="logo">
+		<!-- mini logo for sidebar mini 50x50 pixels -->
+		<span class="logo-mini"><b th:text="${@environment.getProperty('application.mininame')}"></b></span>
+		<!-- logo for regular state and mobile devices -->
+		<span class="logo-lg" th:text="${@environment.getProperty('application.shortname')}"></span>
+	</a>
+	<!-- Header Navbar: style can be found in header.less -->
+	<nav class="navbar navbar-static-top">
+		<!-- Sidebar toggle button-->
+		<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+			<span class="sr-only">Toggle navigation</span>
+		</a>
+		
+		<div class="navbar-custom-menu">
+			<ul class="nav navbar-nav">
+				
+				
+				<!-- User Account: style can be found in dropdown.less -->
+				<li class="dropdown user user-menu">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+						<span class="hidden-xs"
+						      th:text="${session.user.getFirstName() + ' ' + session.user.getLastName()}"
+						      th:unless="${session == null}">[...]</span>
+					</a>
+					<ul class="dropdown-menu">
+						<!-- User image -->
+						<li class="user-header">
+							<img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+							
+							<p class="hidden-xs"
+							   th:text="${session.user.getFirstName() + ' ' + session.user.getLastName()}"
+							   th:unless="${session == null}">[...]</p>
+						</li>
+						<li class="user-footer">
+							<div class="pull-right">
+								<a th:href="@{/logout}" href="#" class="btn btn-default btn-flat">Sign out</a>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<!-- Control Sidebar Toggle Button -->
+				<!-- <li>
+				  <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+				</li> -->
+			</ul>
+		</div>
+	</nav>
+</header>
 
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          
-          
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-	            <span class="hidden-xs"
-	                  th:text="${session.user.getFirstName() + ' ' + session.user.getLastName()}"
-	                  th:unless="${session == null}">[...]</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-	
-	              <p class="hidden-xs"
-	                    th:text="${session.user.getFirstName() + ' ' + session.user.getLastName()}"
-	                    th:unless="${session == null}">[...]</p>
-              </li>
-              <li class="user-footer">
-                <div class="pull-right">
-                  <a th:href="@{/logout}" href="#" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <!-- Control Sidebar Toggle Button -->
-          <!-- <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li> -->
-        </ul>
-      </div>
-    </nav>
-  </header>
-  
-  
-  <aside th:fragment="sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">      
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
-        <li class="treeview" th:classappend="${module == 'dashboard' ? 'active' : ''}">
-          <a href="admin.html">
-            <i class="fa fa-dashboard"></i> <span>DashBoard</span>
-          </a>
-	        <ul class="treeview-menu">
-		        <li th:classappend="${module == 'dashboard' ? 'active' : ''}" ><a href="admin.html"><i class="fa fa-circle-o"></i> Dashboard</a></li>
-	        </ul>
-        </li>
-        <li class="treeview " th:classappend="${module == 'Customer Maintenance Add/Edit' ? 'active' : ''} + ${module == 'Customer Maintenance Search' ? 'active' : ''}"	>
-          <a href="#">
-            <i class="fa fa-users"></i>
-            <span>Customer Maintenance</span>
-            <span class="pull-right-container">
+
+<aside th:fragment="sidebar">
+	<!-- sidebar: style can be found in sidebar.less -->
+	<section class="sidebar">
+		<!-- sidebar menu: : style can be found in sidebar.less -->
+		<ul class="sidebar-menu" data-widget="tree">
+			<li class="header">MAIN NAVIGATION</li>
+			<li class="treeview" th:classappend="${module == 'dashboard' ? 'active' : ''}">
+				<a th:href="@{/admin}">
+					<i class="fa fa-dashboard"></i> <span>DashBoard</span>
+				</a>
+				<ul class="treeview-menu">
+					<li th:classappend="${module == 'dashboard' ? 'active' : ''}"><a th:href="@{/admin}"><i class="fa fa-circle-o"></i> Dashboard</a>
+					</li>
+				</ul>
+			</li>
+			<li class="treeview " th:classappend="${module == 'Customer Maintenance Add/Edit' ? 'active' : ''} + ${module == 'Customer Maintenance Search' ? 'active' : ''}">
+				<a href="#">
+					<i class="fa fa-users"></i>
+					<span>Customer Maintenance</span>
+					<span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
-          </a>
-          <ul class="treeview-menu">
-            <li th:classappend="${module == 'Customer Maintenance Add/Edit' ? 'active' : ''}" ><a href="customer.html"><i class="fa fa-circle-o"></i> Add</a></li>
-            <li th:classappend="${module == 'Customer Maintenance Search' ? 'active' : ''}" ><a href="customer-search.html"><i class="fa fa-circle-o"></i>Search</a></li>
-          </ul>
-        </li>
-        <li class="treeview " th:classappend="${module == 'User Maintenance Add/Edit' ? 'active' : ''} + ${module == 'User Maintenance Search' ? 'active' : ''}"	>
-          <a href="#">
-            <i class="fa fa-user-secret"></i>
-            <span>User Maintenance</span>
-            <span class="pull-right-container">
+				</a>
+				<ul class="treeview-menu">
+					<li th:classappend="${module == 'Customer Maintenance Add/Edit' ? 'active' : ''}">
+						<a th:href="@{/customer}"><i class="fa fa-circle-o"></i> Add</a></li>
+					<li th:classappend="${module == 'Customer Maintenance Search' ? 'active' : ''}">
+						<a th:href="@{/customer-search}"><i class="fa fa-circle-o"></i>Search</a></li>
+				</ul>
+			</li>
+			<li class="treeview " th:classappend="${module == 'User Maintenance Add/Edit' ? 'active' : ''} + ${module == 'User Maintenance Search' ? 'active' : ''}">
+				<a href="#">
+					<i class="fa fa-user-secret"></i>
+					<span>User Maintenance</span>
+					<span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
-          </a>
-          <ul class="treeview-menu">
-            <li th:classappend="${module == 'User Maintenance Add/Edit' ? 'active' : ''}" ><a href="user.html"><i class="fa fa-circle-o"></i> Add</a></li>
-            <li th:classappend="${module == 'User Maintenance Search' ? 'active' : ''}" ><a href="user-search.html"><i class="fa fa-circle-o"></i>Search</a></li>
-          </ul>
-        </li>
-        
-      </ul>
-    </section>
-    <!-- /.sidebar -->
-  </aside>
-  
-  
+				</a>
+				<ul class="treeview-menu">
+					<li th:classappend="${module == 'User Maintenance Add/Edit' ? 'active' : ''}"><a th:href="@{/user}"><i class="fa fa-circle-o"></i>
+						Add</a></li>
+					<li th:classappend="${module == 'User Maintenance Search' ? 'active' : ''}">
+						<a th:href="@{/user-search}"><i class="fa fa-circle-o"></i>Search</a></li>
+				</ul>
+			</li>
+		
+		</ul>
+	</section>
+	<!-- /.sidebar -->
+</aside>
+
+
 </body>
 </html>

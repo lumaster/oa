@@ -49,7 +49,7 @@ create table user_permission
 	constraint user_permission_user_permission_id_uindex
 		unique (user_permission_id),
 	constraint user_permission_user_user_id_fk
-		foreign key (user_id) references mtn.user (user_id)
+		foreign key (user_id) references user (user_id)
 )
 ;
 
@@ -62,7 +62,8 @@ create index user_permission_user_user_id_fk
 CREATE TABLE customer
 (
     customer_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    customer_name VARCHAR(255),
+    customer_first_name VARCHAR(255),
+    customer_last_name VARCHAR(255),
     customer_hn VARCHAR(255),
     customer_passport_number VARCHAR(255),
     customer_birth_date DATETIME,

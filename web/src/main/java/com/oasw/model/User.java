@@ -1,4 +1,4 @@
-package com.oasw.domain;
+package com.oasw.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

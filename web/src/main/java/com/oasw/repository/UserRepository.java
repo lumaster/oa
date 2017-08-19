@@ -2,7 +2,7 @@ package com.oasw.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.oasw.domain.User;
+import com.oasw.model.User;
 
 public interface UserRepository extends CrudRepository<User, Long> {
 

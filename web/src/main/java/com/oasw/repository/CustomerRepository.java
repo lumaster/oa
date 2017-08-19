@@ -1,10 +1,8 @@
 package com.oasw.repository;
 
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.CrudRepository;
 
-import com.oasw.domain.Customer;
+import com.oasw.model.Customer;
 
-//@PreAuthorize("hasRole('USER')")
-public interface CustomerRepository extends PagingAndSortingRepository<Customer, Long> {
-
+public interface CustomerRepository extends CrudRepository<Customer, Long> {
 }

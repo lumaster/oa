@@ -16,7 +16,7 @@
 	
 	<!-- Content Wrapper. Contains page content -->
 	<div class="content-wrapper">
-		<form class="form-horizontal" action="#" th:action="@{/customer}" th:object="${customer}" m ethod="post">
+		<form class="form-horizontal" action="#" th:action="@{/customer}" th:object="${customer}" method="post">
 			<!-- Content Header (Page header) -->
 			<section class="row content-header">
 				<div class="col-sm-6">
@@ -88,7 +88,7 @@
 														<div class="input-group-addon">
 															<i class="fa fa-calendar"></i>
 														</div>
-														<input id="datemask" type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" th:field="*{birthDate}" />
+														<input id="datepicker" type="text" class="form-control" th:field="*{birthDate}" data-date-format="dd/mm/yyyy" data-provide="datepicker" />
 													</div>
 												</div>
 											</div>
@@ -106,10 +106,10 @@
 												</div>
 											</div>
 											<div class="form-group">
-												<div class="col-md-3"><p>Accomendation</p></div>
+												<div class="col-md-3"><p>Accommodation</p></div>
 												<div class="col-md-9">
 													<select class="form-control" th:field="*{accommodation}">
-														<option value="2" selected="selected">Accomendation1</option>
+														<option value="2" selected="selected">Accommodation01</option>
 														<option value="2">Accomendation2</option>
 														<option value="2">Accomendation3</option>
 														<option value="2">Accomendation4</option>
@@ -121,7 +121,7 @@
 											<div class="form-group">
 												<div class="col-md-3"><p>Pick/Deliver service</p></div>
 												<div class="col-md-9">
-													<select class="form-control" th:field="*{deliveryService}">
+													<select class="form-control" th:field="*{deliverService}">
 														<option value="2" selected="selected">Pick/Deliver service1</option>
 														<option value="2">Pick/Deliver service2</option>
 														<option value="2">Pick/Deliver service3</option>
@@ -486,11 +486,13 @@
 	<aside th:include="fragments/footer :: footer">
 	</aside>
 	<script>
-        $(function () {
-            //Datemask dd/mm/yyyy
-            $('#datemask').inputmask('dd/mm/yyyy', {'placeholder': 'dd/mm/yyyy'})
-
-        })
+        $(function() {
+            $('#datepicker').datepicker({
+                autoclose: true,
+                format: 'dd/mm/yyyy'
+            })
+        });
+        
 	</script>
 </div>
 </body>
